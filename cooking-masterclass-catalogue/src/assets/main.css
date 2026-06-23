@@ -1,0 +1,60 @@
+@import './base.css';
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.page-shell {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.catalogue {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.catalogue-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.catalogue-controls h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  color: var(--ink-1);
+}
+
+.filter-button {
+  border: 1px solid var(--brand-deep);
+  background: var(--surface-3);
+  color: var(--brand-deep);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-button:hover {
+  background: var(--brand-deep);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  #app {
+    padding: 1rem;
+  }
+}
