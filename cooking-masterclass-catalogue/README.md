@@ -78,3 +78,5 @@ src/
 - Move course data to an API or static JSON
 - Add automated tests for filtering and save behavior
 - Add view routing for course details
+
+<img width="1357" height="696" alt="cookingmc" src="https://github.com/user-attachments/assets/b085bb13-4fe3-495e-998c-4c87663955ea" />
