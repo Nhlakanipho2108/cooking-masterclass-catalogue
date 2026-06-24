@@ -1,38 +1,80 @@
-# cooking-masterclass-catalogue
+# Cooking Masterclass Catalogue
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue 3 + Vite app that presents a modern catalogue of chef-led cooking classes.
 
-## Recommended IDE Setup
+The UI includes:
+- Responsive course cards
+- Availability filtering
+- Save-to-wishlist interactions with a live count
+- Warm editorial styling with custom CSS variables and typography
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Stack
 
-## Recommended Browser Setup
+- Vue 3 (`<script setup>` + Composition API)
+- Vite
+- CSS (no UI framework)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Prerequisites
 
-## Customize configuration
+- Node.js `^22.18.0` or `>=24.12.0`
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Setup
 
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Development
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Build and Preview
 
-```sh
+```bash
 npm run build
+npm run preview
 ```
+
+## Format Source
+
+```bash
+npm run format
+```
+
+## Scripts
+
+- `dev`: runs the Vite development server
+- `build`: creates a production bundle
+- `preview`: serves the production build locally
+- `format`: formats `src/` using `oxfmt`
+
+## Project Structure
+
+```text
+src/
+  App.vue
+  main.js
+  assets/
+    base.css
+    main.css
+  components/
+    SiteHeader.vue
+    CourseCard.vue
+```
+
+## Functional Notes
+
+- Course data is currently hardcoded in `App.vue`.
+- Filtering is handled by a computed `visibleCourses` value.
+- Wishlist state is tracked by course IDs in `wishlistIds`.
+- `CourseCard.vue` emits a `save` event, and `App.vue` owns the state update.
+- Sold out courses cannot be saved, and saved courses are disabled in the UI.
+
+## Next Enhancements
+
+- Persist wishlist state in local storage
+- Move course data to an API or static JSON
+- Add automated tests for filtering and save behavior
+- Add view routing for course details
